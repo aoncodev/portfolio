@@ -76,7 +76,7 @@ const projects = [
       "This backend service manages plant care using Flask and MongoDB. It allows users to monitor and control sensors for light, moisture, temperature, humidity, and other environmental factors related to plant care. The API provides endpoints for managing sensor data and settings.",
     techStack: ["Flask", "MongoDB"],
     liveDemo: "#", // No live demo available
-    github: "https://github.com/aon123/plant", // GitHub repository link
+    github: "https://github.com/aoncodev/plantAPI", // GitHub repository link
     image: "plant.jpg", // Replace with actual image URL if you have one
   },
   // Add more projects as needed
