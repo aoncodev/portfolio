@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { FaFolder, FaEnvelope } from "react-icons/fa"; // Import only necessary icons
+import { FaFolder, FaEnvelope } from "react-icons/fa";
 
 import Project from "./Project";
 import Contact from "./Contact";
@@ -11,7 +11,7 @@ import Header from "./Header";
 
 function Section({ children, id }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
   const controls = useAnimation();
 
   useEffect(() => {
@@ -28,7 +28,7 @@ function Section({ children, id }) {
         visible: { opacity: 1, y: 0 },
       }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="py-20"
+      className="py-10 sm:py-20"
       id={id}
     >
       {children}
@@ -75,7 +75,7 @@ export default function Portfolio() {
   return (
     <div
       className={`min-h-screen font-sans ${
-        isDarkMode ? "bg-[#141414] text-white" : "bg-[#FFF] text-gray-900"
+        isDarkMode ? "bg-[#161616] text-white" : "bg-[#FFF] text-gray-900"
       }`}
     >
       <Header
@@ -85,22 +85,24 @@ export default function Portfolio() {
         scrollToSection={scrollToSection}
       />
 
-      <main className="container mx-auto max-w-6xl px-6 pt-4">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 pt-4">
         <Section id="about">
           <About isDarkMode={isDarkMode} />
         </Section>
 
         <Section id="projects">
-          <h2 className="text-3xl font-bold text-center mb-12 flex items-center justify-center">
-            <FaFolder className="mr-2 h-6 w-6" />
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 flex items-center justify-center">
+            <FaFolder className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
             Projects
           </h2>
-          <Project isDarkMode={isDarkMode} />
+          <div className="w-full">
+            <Project isDarkMode={isDarkMode} />
+          </div>
         </Section>
 
         <Section id="contact">
-          <h2 className="text-3xl font-bold text-center mb-12 flex items-center justify-center">
-            <FaEnvelope className="mr-2 h-6 w-6" />
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 flex items-center justify-center">
+            <FaEnvelope className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
             Contact
           </h2>
           <Contact isDarkMode={isDarkMode} />
@@ -109,10 +111,10 @@ export default function Portfolio() {
 
       <footer
         className={`${
-          isDarkMode ? "bg-[#141414] text-gray-300" : "bg-[#FFF] text-gray-900"
-        } py-8 mt-12`}
+          isDarkMode ? "bg-[#161616] text-gray-300" : "bg-[#FFF] text-gray-900"
+        } py-6 sm:py-8 mt-12`}
       >
-        <div className="container mx-auto px-6 text-center text-sm">
+        <div className="container mx-auto px-4 sm:px-6 text-center text-sm">
           &copy; {new Date().getFullYear()} Ahidjon. All rights reserved.
         </div>
       </footer>

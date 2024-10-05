@@ -20,10 +20,9 @@ import {
   SiAmazon,
 } from "react-icons/si"; // No AWS here if not available
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css"; // Ensure blur effect CSS is imported
-
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
+import "react-lazy-load-image-component/src/effects/blur.css"; // Ensure blur effect CSS is imported
 
 export default function About({ isDarkMode }) {
   const [isKorean, setIsKorean] = useState(false);
@@ -108,7 +107,7 @@ export default function About({ isDarkMode }) {
     },
   ];
   return (
-    <div className="max-w-4xl mt-2 mx-auto space-y-16 justify-center">
+    <div className="max-w-4xl mt-8 mx-auto space-y-16 justify-center">
       <div className="flex flex-col md:flex-row items-center gap-10">
         <div
           className="flex justify-center p-2 "
@@ -135,7 +134,7 @@ export default function About({ isDarkMode }) {
           </div>
         </div>
 
-        <div className="space-y-4 max-w-md">
+        <div className="space-y-4 max-w-lg">
           {" "}
           {/* Set a max-width for the text container */}
           <motion.div
@@ -149,8 +148,7 @@ export default function About({ isDarkMode }) {
             <h2 className="text-4xl font-bold leading-relaxed">
               {isKorean ? (
                 <>
-                  안녕하세요,
-                  <br /> 아히전 입니다!
+                  안녕하세요, <br /> 아히전 입니다!
                 </>
               ) : (
                 <>
@@ -211,7 +209,7 @@ export default function About({ isDarkMode }) {
               key={skill.name}
               className={`${
                 isDarkMode
-                  ? "bg-[#333333] hover:bg-[#4a4a4a] text-white"
+                  ? "bg-[#616161] hover:bg-[#7b7b7b] text-white"
                   : "bg-gray-200 hover:bg-black text-gray-800 hover:text-white"
               } px-3 py-1 rounded-full text-sm font-medium flex items-center`}
             >

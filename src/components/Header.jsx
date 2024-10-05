@@ -38,7 +38,7 @@ export default function Header({
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-10 ${
-        isDarkMode ? "bg-[#141414]/80" : "bg-[#FFF]/80"
+        isDarkMode ? "bg-[#161616]/80" : "bg-[#FFF]/80"
       } backdrop-blur-md`}
     >
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -89,11 +89,11 @@ export default function Header({
           >
             {isDarkMode ? (
               <>
-                <FaSun className="mr-2" /> Light Mode
+                <FaSun className="mr-2" /> Mode
               </>
             ) : (
               <>
-                <FaMoon className="mr-2" /> Dark Mode
+                <FaMoon className="mr-2" /> Mode
               </>
             )}
           </button>
